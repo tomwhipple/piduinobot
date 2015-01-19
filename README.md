@@ -12,3 +12,10 @@ We'd prefer not to run any UI on the Pi, and instead connect from a computer. So
     `# apt-get install samba samba-common-bin avahi-daemon avahi-utils`
 - avr tools
 - ino (command line Arduino builds)
+
+Quickstart
+----------
+
+Use `ino` command.
+
+If a sketch has already been uploaded to the alamode board (and it supports serial comm) `ino serial`.
