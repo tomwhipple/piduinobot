@@ -1,4 +1,6 @@
 
+#include "IrSensors.h"
+
 /****************************
    ir reflectance sensor code   
 ****************************/

@@ -11,6 +11,9 @@ Michael Margolis 28 May 2012
 
 #include "robotDefines.h"  // global defines
 
+const char* states[] = {"Left", "Right", "Forward", "Back", "Rotate", "Stop"};
+const char* locationString[] = {"Left", "Right", "Center"}; // labels for debug
+
 // Setup runs at startup and is used configure pins and init system variables
 void setup()
 {

@@ -1,3 +1,6 @@
+#ifndef _robotDefines_h
+#define _robotDefines_h
+
 /***** Global Defines ****/ 
 
 // defines for locations of sensors
@@ -10,7 +13,8 @@ const int DIR_LEFT   = 0;
 const int DIR_RIGHT  = 1;
 const int DIR_CENTER = 2;
     
-const char* locationString[] = {"Left", "Right", "Center"}; // labels for debug
+extern const char* locationString[]; //= {"Left", "Right", "Center"}; // labels for debug
+
 // see http://arduino.cc/en/Reference/String for more on character string arrays
 
 // obstacles constants 
@@ -25,6 +29,8 @@ const int LED_PIN = 13;
 
 /// move states:
 enum        {MOV_LEFT, MOV_RIGHT, MOV_FORWARD, MOV_BACK, MOV_ROTATE, MOV_STOP};
-const char* states[] = {"Left", "Right", "Forward", "Back", "Rotate", "Stop"};
+extern const char* states[];
 
 /**** End of Global Defines ****************/
+
+#endif
