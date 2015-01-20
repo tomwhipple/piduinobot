@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include "IrSensors.h"
+#include "Move.h"
 
 void lookBegin();
 boolean lookForObstacle(int obstacle);

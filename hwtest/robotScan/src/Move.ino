@@ -2,10 +2,13 @@
  Drive: mid level movement functions
 *************************************/
 
+#include "Move.h"
+
 int moveState = MOV_STOP;   // what robot is doing
  
 int  moveSpeed   = 0;     // move speed stored here (0-100%)
 int  speedIncrement = 10; // percent to increase or decrease speed
+
 
 void moveBegin()
 {
@@ -116,7 +119,7 @@ int moveGetState()
 // return the time in milliseconds to turn the given angle at the given speed
 long rotationAngleToTime( int angle, int speed)
 {
-int fullRotationTime; // time to rotate 360 degrees at given speed
+  int fullRotationTime; // time to rotate 360 degrees at given speed
 
   if(speed < MIN_SPEED)
     return 0; // ignore speeds slower then the first table entry
