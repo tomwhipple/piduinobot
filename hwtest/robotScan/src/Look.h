@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include "IrSensors.h"
 #include "Move.h"
+#include "Softservo.h"
+#include "Distance.h"
 
 void lookBegin();
 boolean lookForObstacle(int obstacle);

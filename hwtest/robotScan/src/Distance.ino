@@ -1,3 +1,5 @@
+#include "Distance.h"
+
 /****************************
    distance sensor code   
 ****************************/

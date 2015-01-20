@@ -1,5 +1,11 @@
-#include "Softservo.h"
+#ifndef _Softservo_h
+#define _Softservo_h
 
+#include <Arduino.h>
+
+void softServoAttach(int pin);
+void softServoWrite(int angle, long servoDelay);
+#line 1 "src/Softservo.ino"
 /*******************************
  Softservo.ino
  software servo control without using timers
@@ -26,3 +32,5 @@ void softServoWrite(int angle, long servoDelay)
     servoDelay -= 20; 
   } while(servoDelay >=0);
 }
+
+#endif
