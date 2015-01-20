@@ -1,3 +1,5 @@
+#include "Look.h"
+
 /**********************
  code to look for obstacles
 **********************/
