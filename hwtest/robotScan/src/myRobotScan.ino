@@ -11,6 +11,10 @@ Michael Margolis 28 May 2012
 
 #include "robotDefines.h"  // global defines
 
+#include "Move.h"
+#include "Softservo.h"
+#include "Look.h"
+
 const char* states[] = {"Left", "Right", "Forward", "Back", "Rotate", "Stop"};
 const char* locationString[] = {"Left", "Right", "Center"}; // labels for debug
 
