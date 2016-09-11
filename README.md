@@ -18,4 +18,7 @@ Quickstart
 
 Use `ino` command.
 
-If a sketch has already been uploaded to the alamode board (and it supports serial comm) `ino serial`.
+- Compile with `ino build`.
+- Upload (from pi) with `ino upload`.
+- Connect with `ino serial`. (note upload also uses serial, the two cannot be run simultaneously
+
