@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 #include "RobotConfig.h"
 #include "Ping.h"
 
@@ -17,7 +19,7 @@ long getEchoDuration() {
   // pulse whose duration is the time (in microseconds) from the sending
   // of the ping to the reception of its echo off of an object.
   pinMode(PING_PIN, INPUT);
-  duration = pulseIn(PING_PIN, HIGH);
+  duration = pulseIn(PING_PIN, HIGH, PING_TIMEOUT_INTERVAL);
   
   return duration;
 }

@@ -14,7 +14,7 @@ typedef struct {
 
 void initalizeRobotState(robot_state_t*);
 
-void getRobotStateString(char**, robot_state_t*);
+void getRobotStateString(char buffer[], robot_state_t*);
 
 #ifdef __cplusplus
 }
