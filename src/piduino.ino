@@ -19,6 +19,8 @@ void setup()
 }
 
 void loop() {
+  incrementCount(&robot_state);
+
   // read serial to desired state
   
   // read sensors

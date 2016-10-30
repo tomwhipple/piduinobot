@@ -9,12 +9,15 @@ extern "C" {
 
 typedef struct {
   int distance;
+  unsigned long int count;
 } robot_state_t;
 
 
 void initalizeRobotState(robot_state_t*);
 
 void getRobotStateString(char buffer[], robot_state_t*);
+
+void incrementCount(robot_state_t*);
 
 #ifdef __cplusplus
 }
