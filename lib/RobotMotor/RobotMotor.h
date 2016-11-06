@@ -8,6 +8,10 @@
 #ifndef _RobotMotor_h
 #define _RobotMotor_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* if you have the 4WD chassis, change the line:
      #define CHASSIS_2WD 
    to:
@@ -39,4 +43,7 @@ void motorStop(int motor);
 
 void motorBrake(int motor);
 
+#ifdef __cplusplus
+}
+#endif
 #endif

@@ -4,4 +4,6 @@
 #define PING_PIN 10
 #define SERVO_PIN 9
 
+#define SERIAL_BAUD 9600
+
 #endif 
