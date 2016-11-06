@@ -22,6 +22,8 @@ unsigned long count;
 
 void initalizeRobotState(robot_state_t*);
 
+void initializeMotors();
+
 void getRobotStateString(char buffer[], robot_state_t*);
 
 void incrementCount(robot_state_t*);

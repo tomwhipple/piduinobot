@@ -12,7 +12,12 @@ void initalizeRobotState(robot_state_t* state) {
   state->turn = 0;
   state->speed = 0;
   state->head = 80;
-  state->cmd_pending = 0;
+  state->cmd_pending = 1;
+}
+
+void initializeMotors() {
+  motorBegin(MOTOR_RIGHT);
+  motorBegin(MOTOR_LEFT);
 }
 
 void getRobotStateString(char buf[], robot_state_t* state) {

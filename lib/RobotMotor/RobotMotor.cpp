@@ -53,6 +53,10 @@ AF_DCMotor motors[] = {
 #else
 #error "expected definition: CHASSIS_2WD or CHASSIS_4WD not found" 
 #endif
+
+#if defined CHASSIS_4WD and defined CHASSIS_2WD
+#error "unexpeced definition of both CHASSIS_4WD and CHASSIS_2WD. only one is valid."
+#endif
 	
 int  motorSpeed[2]  = {0,0}; // left and right motor speeds stored here (0-100%)
 

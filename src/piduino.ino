@@ -26,10 +26,10 @@ void setup()
   Serial.begin(SERIAL_BAUD);
   while(!Serial);
   initalizeRobotState(&robot_state);
+  initializeMotors();
 
   head_servo.attach(SERVO_PIN);
   delay(HW_SETUP_DELAY);
-  head_servo.write(HEAD_CENTER);
 }
 
 void loop() {

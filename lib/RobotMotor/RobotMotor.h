@@ -8,10 +8,6 @@
 #ifndef _RobotMotor_h
 #define _RobotMotor_h
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /* if you have the 4WD chassis, change the line:
      #define CHASSIS_2WD 
    to:
@@ -19,6 +15,10 @@ extern "C" {
  */
 
 #define CHASSIS_2WD // change suffix from 2WD to 4WD if using the 4WD chassis
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // defines for left and right motors
 const int MOTOR_LEFT  = 0;
