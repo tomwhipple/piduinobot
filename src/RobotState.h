@@ -3,8 +3,9 @@
 
 #define VELOCITY_DELTA 5
 #define ROTATION_DELTA 10
+#define MIN_SPEED 40
 #define MAX_SPEED 100
-
+#define HEAD_CENTER 85
 
 #ifdef __cplusplus
 extern "C" {

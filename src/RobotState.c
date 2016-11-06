@@ -11,7 +11,7 @@ void initalizeRobotState(robot_state_t* state) {
   state->distance = 0;
   state->turn = 0;
   state->speed = 0;
-  state->head = 80;
+  state->head = HEAD_CENTER;
   state->cmd_pending = 1;
 }
 
@@ -51,14 +51,15 @@ void parseCharCommand(robot_state_t* state, char c) {
       break;
     case ' ':
       state->speed = 0;
+      // fall through & set turn
     case '=':
       state->turn = 0;
       break;
     case 'r':
-      state->head++;
+      state->head--;
       break;
     case 'l':
-      state->head--; 
+      state->head++; 
       break;
     default:
       state->cmd_pending = 0;
@@ -77,9 +78,23 @@ void setMotorRotation(int motor, int speed) {
   } 
 }
 
+int limit_speed(int speed_in) {
+  if (speed_in > 0) {
+    return min(MAX_SPEED,max(MIN_SPEED,speed_in));
+  }
+  else if (speed_in < 0) {
+    return min(-MIN_SPEED,max(-MAX_SPEED,speed_in));
+  }
+  else {
+    return 0;
+  }
+}
+
 void updateMotorState(robot_state_t* state) {
-  int cmd_right_motor = max(MAX_SPEED, state->speed - state->turn);
-  int cmd_left_motor = max(MAX_SPEED, state->speed + state->turn);
+  state->speed = limit_speed(state->speed);
+
+  int cmd_right_motor = min(MAX_SPEED, state->speed - state->turn);
+  int cmd_left_motor = min(MAX_SPEED, state->speed + state->turn);
 
   setMotorRotation(MOTOR_RIGHT, cmd_right_motor);
   setMotorRotation(MOTOR_LEFT, cmd_left_motor);
